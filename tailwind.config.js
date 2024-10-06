@@ -7,6 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeLeft: {
+          "0%": { opacity: "0", transform: "translateX(100px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        lengthLeft: {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
+      },
+      animation: {
+        fadeLeft: "fadeLeft 1s ease-out forwards",
+        lengthLeft: "lengthLeft 2s ease-out forwards",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -14,6 +28,7 @@ module.exports = {
         textGrey: "#ffffffcc",
         borderTwo: "#644aee99",
         textDark: "#6c6c6c",
+        purpleBg: "#7e6cff",
       },
     },
   },

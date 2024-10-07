@@ -7,8 +7,8 @@ const Page = () => {
 
   return (
     <main className="flex items-center justify-center h-screen">
-      <section className="rounded-2xl overflow-hidden p-[6px] w-full max-w-[1230px] border border-borderTwo focus-visible:outline-none relative">
-        <div className="h-full backdrop-blur-lg opacity-100 bg-[#08080a80] flex rounded-2xl p-[24px] z-10 flex-col lg:items-center lg:justify-center w-full gap-2 lg:h-[540px]  relative transition-transform duration-300 ease-out">
+      <section className="rounded-2xl max-lg:fixed max-lg:bottom-0 overflow-hidden p-[6px] w-full max-w-[1230px] border border-borderTwo focus-visible:outline-none relative">
+        <div className="backdrop-blur-lg opacity-100 bg-[#08080a80] flex rounded-2xl p-[24px] z-10 flex-col lg:items-center lg:justify-center w-full gap-2 lg:h-[540px]  relative transition-transform duration-300 ease-out">
           <div className="flex items-start justify-between w-full gap-4">
             <div className="z-20 flex flex-col w-full gap-3 lg:px-2 lg:w-full h-max">
               <div className="relative flex items-center w-full gap-3 rounded-full number">

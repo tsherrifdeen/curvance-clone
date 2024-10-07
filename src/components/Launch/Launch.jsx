@@ -9,6 +9,12 @@ import {
   publicPhases,
   specialMarkets,
 } from "../../constants/images";
+import Markets from "./Markets";
+import SpecificMarkets from "./SpecificMarkets";
+import Lock from "./Lock";
+import Claim from "./Claim";
+import Dashboard from "./Dashboard";
+import Testnet from "./Testnet";
 const Launch = ({ page, setPage }) => {
   // const [page, setPage] = useState(0);
   const images = [
@@ -20,6 +26,14 @@ const Launch = ({ page, setPage }) => {
     publicPhases,
   ];
 
+  const contents = [
+    <Markets />,
+    <SpecificMarkets />,
+    <Lock />,
+    <Claim />,
+    <Dashboard />,
+    <Testnet />,
+  ];
   const NextPage = () => {
     if (page == 5) {
       console.log("lastPage");
@@ -39,44 +53,28 @@ const Launch = ({ page, setPage }) => {
   };
 
   return (
-    <section className="z-10 flex flex-col w-full gap-8 lg:items-center lg:justify-center lg:flex-row lg:items-stretch h-max lg:h-full ">
-      <div className="w-3/5">
-        <img
-          alt=""
-          loading="lazy"
-          width="2000"
-          height="2000"
-          decoding="async"
-          data-nimg="1"
-          className="h-full scale-[1.015] select-none object-cover w-full rounded-2xl border border-borderLight animate-fadeLeft"
-          src={images[page].src}
-          style={{ color: "transparent" }}
-        />
+    <section className="z-10 flex flex-col w-full gap-8 lg:justify-center lg:flex-row lg:items-stretch h-max lg:h-full ">
+      <div className="lg:w-3/5">
+        <div className="mx-auto border rounded-2xl max-lg:max-w-xl border-borderLight">
+          <img
+            alt=""
+            loading="lazy"
+            width="2000"
+            height="2000"
+            decoding="async"
+            data-nimg="1"
+            className="h-full scale-[1.015] select-none object-cover w-full rounded-2xl animate-fadeLeft "
+            src={images[page].src}
+            style={{ color: "transparent" }}
+          />
+        </div>
       </div>
-      <div className="w-2/5">
+      <div className="lg:w-2/5">
         <div
-          className="h-full w-full flex flex-col justify-between max-lg:max-h-[30vh] overflow-y-auto"
+          className="flex flex-col justify-between w-full h-full overflow-x-hidden"
           style={{ opacity: "1", transform: "none" }}
         >
-          <article className="text-content relative max-lg:min-h-[30vh] flex flex-col gap-1 w-full h-full overflow-y-auto animate-fadeLeft">
-            <h2
-              id=""
-              className="font-sans text-[1.5rem] leading-[2rem] tracking-normal text-new-foreground w-full font-medium"
-            >
-              Markets
-            </h2>
-            <div className="mt-2 mb-3">
-              <p className="font-sans text-base text-textDark leading-[1.5rem] w-full mb-6 font-normal">
-                This page provides a detailed breakdown of all Markets and
-                assets supported on Curvance. Markets are grouped by smart
-                contract risk and asset volatility while showing their Chain,
-                TVL, Total Collateral, Total Debt, and Maximum Debt. Users can
-                view and search Markets for depositing, lending, and borrowing
-                from this page.
-              </p>
-            </div>
-          </article>
-
+          {contents[page]}
           <Buttons prev={PrevPage} next={NextPage} page={page} />
         </div>
       </div>

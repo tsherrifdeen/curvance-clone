@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import About from "./About";
 import Lending from "./Lending";
 import { homeImage } from "@/constants/images";
+import Docs from "./Docs";
+import Locking from "./Locking";
 
 const HomeContent = () => {
   return (
@@ -14,6 +16,8 @@ const HomeContent = () => {
           <div className="grid grid-cols-2 ">
             <About />
             <Lending />
+            <Locking />
+            <Docs />
           </div>
         </div>
         <div className="col-span-1 ">

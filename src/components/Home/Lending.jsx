@@ -12,7 +12,7 @@ const Lending = () => {
         </div>
       </div>
       <div className="relative flex flex-col items-center justify-center w-full h-full gap-5 overflow-y-hidden text-xs border-b lg:border-b-0 lg:border-t-borderLight font-gellix text-white/60 false"></div>
-      <div class="p-1 xl:p-3 xl:px-1 lg:px-2 xl:mb-2">
+      <div class="p-1 xl:p-3 xl:px-4 lg:px-2 xl:mb-2">
         <div class="gradient-bg absolute left-0 right-0 -top-12 w-full h-16 -z-[5]"></div>
         <p class="text-[13.8px] z-[1000] lg:text-base text-white/75 font-gellix font-lighter">
           Zap and leverage long tail positions in one click

@@ -119,7 +119,7 @@ const Header = () => {
         <a
           target="_blank"
           className="text-white leading-inherit box-border border-0 border-gray-300 px-4 py-2 rounded-lg shadow-inner bg-[rgb(24,24,27)] shake-animation"
-          href="http://app.curvance.com/"
+          href="/launch"
         >
           <span className="text-sm text-white flex justify-center items-center py-1 leading-none whitespace-nowrap text-[15px] md:text-base">
             Launch App
